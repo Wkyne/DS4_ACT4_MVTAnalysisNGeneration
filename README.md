@@ -1,22 +1,15 @@
-# Multi-Variant Text Analysis and Generation
+# Act 4 — Multi-Variant Text Analysis and Generation
+Group 1 CSS182-04 CM2
 
-> **Course Activity** | BERT, GPT, and GANs
-> **Dataset:** | Placeholder
-
+> **Course Activity** | BERT, GPT, and GANs  
+> **Dataset:** | [Twitter Financial News Sentiment](https://huggingface.co/datasets/zeroshot/twitter-financial-news-sentiment) — 11,932 finance tweets, 3-class sentiment (Bearish / Bullish / Neutral)
 ---
 Submitted by:  
 Granada, Dustin Joaquin B.  
 Dequinon, Rob Eugene  
-Gallor, Michael Edward II
+Gallor, Michael Edward II  
 
 ---
-Group 1 CSS182-04 CM2
-
-
-# Act 4 — Multi-Variant Text Analysis and Generation
-
-**Course:** Deep Learning / NLP  
-**Dataset:** [Rotten Tomatoes Movie Reviews](https://huggingface.co/datasets/cornell-movie-review-data/rotten_tomatoes) — 10,662 sentences, binary sentiment  
 
 Three NLP architectures implemented on the same corpus for direct comparison: BERT (classification), DistilGPT-2 (generation), and a custom Text GAN (adversarial generation).
 
@@ -25,7 +18,7 @@ Three NLP architectures implemented on the same corpus for direct comparison: BE
 ## Repository Structure
 
 ```
-act4-nlp-variants/
+DS4_ACT4_MVTAnalysisNGeneration/
 ├── data/
 │   └── README.md               # Dataset source, license, and loading instructions
 ├── notebooks/
@@ -48,8 +41,8 @@ act4-nlp-variants/
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/<your-username>/act4-nlp-variants.git
-cd act4-nlp-variants
+git clone https://github.com/<your-username>/DS4_ACT4_MVTAnalysisNGeneration.git
+cd DS4_ACT4_MVTAnalysisNGeneration
 ```
 
 ### 2. Install dependencies
@@ -76,6 +69,14 @@ pip install -r requirements.txt
 Each variant notebook is self-contained and can be run independently after `00_preprocessing.ipynb` has been run once.
 
 ---
+
+## Standardized Shared Scripts
+
+```python
+import sys
+sys.path.append('../') # adds root directory to path
+from utils import compute_classification_metrics, compute_generation_metrics, calculate_perplexity
+```
 
 ## Model Variants
 
@@ -139,11 +140,11 @@ subprocess.Popen(["open", os.path.join(os.path.dirname(__file__), "results")])
 ## Citation
 
 ```bibtex
-@InProceedings{Pang+Lee:05a,
-  author    = {Bo Pang and Lillian Lee},
-  title     = {Seeing stars: Exploiting class relationships for sentiment
-               categorization with respect to rating scales},
-  booktitle = {Proceedings of the ACL},
-  year      = {2005}
+@dataset{zeroshot_twitter_financial_news_sentiment,
+  title     = {Twitter Financial News Sentiment},
+  author    = {Zeroshot},
+  year      = {2022},
+  publisher = {HuggingFace Datasets},
+  url       = {https://huggingface.co/datasets/zeroshot/twitter-financial-news-sentiment}
 }
 ```
