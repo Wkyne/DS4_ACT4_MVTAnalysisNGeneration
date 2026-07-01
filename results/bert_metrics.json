@@ -1,0 +1,9 @@
+{
+  "model": "BERT (bert-base-uncased)",
+  "task": "3-class sentiment classification",
+  "accuracy": 0.8819095477386935,
+  "precision_macro": 0.8457151901596346,
+  "recall_macro": 0.8628759192614615,
+  "f1_macro": 0.853431489860221,
+  "time_per_epoch_sec": 94.62519299983978
+}
