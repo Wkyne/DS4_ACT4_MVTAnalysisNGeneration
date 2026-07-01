@@ -1,0 +1,9 @@
+{
+  "model": "DistilGPT-2",
+  "task": "domain-conditioned causal language modeling",
+  "validation_loss": 3.8412680625915527,
+  "perplexity": 46.58450907537649,
+  "bleu": 1.2872005552498873,
+  "rouge_l": 0.04683769332656725,
+  "time_per_epoch_sec": 90.62756056785584
+}

@@ -1,29 +1,29 @@
-# Core
-torch>=2.0.0
-tensorflow>=2.12.0
+# Core numerical/data stack
+numpy>=1.26.0
+pandas>=2.2.0
+scikit-learn>=1.4.0
 
-# HuggingFace
+# PyTorch backend used by BERT, GPT, and Text-GAN notebooks
+--extra-index-url https://download.pytorch.org/whl/cu124
+torch>=2.0.0
+
+# Hugging Face stack for dataset loading, BERT/GPT fine-tuning, and metrics
 transformers>=4.40.0
 datasets>=2.19.0
 tokenizers>=0.19.0
-evaluate>=0.4.0
 accelerate>=0.29.0
+evaluate>=0.4.0
 
-# NLP utilities
+# NLP utilities and generation metrics
 nltk>=3.8.1
-scikit-learn>=1.4.0
-
-# Metrics
 rouge-score>=0.1.2
 sacrebleu>=2.4.0
 
-# Data / plotting
-numpy>=1.26.0
-pandas>=2.2.0
+# Plotting and progress bars
 matplotlib>=3.8.0
 seaborn>=0.13.0
 tqdm>=4.66.0
 
-# Notebook
+# Notebook runtime
 ipykernel>=6.29.0
 ipywidgets>=8.1.0
